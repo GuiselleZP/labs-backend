@@ -34,7 +34,7 @@ public class ErrorTest{
         assertNotNull( course.getCourseName( ) );
         assertNotNull( course.getDurationHours( ) );
 
-        assertEquals( courseName, course.getCourseName( ) );
+        assertEquals( durationHours, course.getCourseName( ) );
         assertEquals( course.getCourseName( ), pojo.getCourseName( ) );
         assertEquals( course.getDurationHours( ), pojo.getDurationHours( ) );
 
