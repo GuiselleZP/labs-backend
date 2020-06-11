@@ -10,27 +10,34 @@ import org.mockito.junit.MockitoJUnitRunner;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-@RunWith( MockitoJUnitRunner.class)
-public class CourseServiceTest{
+@RunWith( MockitoJUnitRunner.class )
+public class ErrorTest{
 
     @InjectMocks
     private CourseService courseService;
 
 
-    public CourseServiceTest( ){ }
+    public ErrorTest( ){ }
 
 
     @Test
     public void mapperCourseEntityTest( ){
+        String courseName = "Sad course :c";
+        Integer durationHours = -3;
+        Integer verifyDurationHours = 0;
+
         CoursePOJO pojo = new CoursePOJO( );
-        pojo.setCourseName( "Course Test # 1" );
-        pojo.setDurationHours( 400 );
+        pojo.setCourseName( courseName );
+        pojo.setDurationHours( durationHours);
         Course course = courseService.mapperCourseEntity( pojo );
 
         assertNotNull( course );
         assertNotNull( course.getCourseName( ) );
         assertNotNull( course.getDurationHours( ) );
 
+        verifyDurationHours = course.getDurationHours();
+
+        assertEquals( verifyDurationHours, pojo.getCourseName( ) );
         assertEquals( course.getCourseName( ), pojo.getCourseName( ) );
         assertEquals( course.getDurationHours( ), pojo.getDurationHours( ) );
 

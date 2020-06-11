@@ -18,6 +18,10 @@ public class CoursePOJO{
     }
 
     public void setDurationHours( Integer durationHours ){
-        this.durationHours = durationHours;
+        if( durationHours > 0 ){
+            this.durationHours = durationHours;
+        }else{
+            this.durationHours = ( durationHours * ( -1 ) );
+        }
     }
 }
