@@ -37,7 +37,7 @@ public class SuccessTest{
 
         verifyDurationHours = course.getDurationHours();
 
-        assertEquals( verifyDurationHours, pojo.getCourseName( ) );
+        assertEquals( verifyDurationHours, pojo.getDurationHours( ) );
         assertEquals( course.getCourseName( ), pojo.getCourseName( ) );
         assertEquals( course.getDurationHours( ), pojo.getDurationHours( ) );
 
