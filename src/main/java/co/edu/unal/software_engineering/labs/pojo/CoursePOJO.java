@@ -10,10 +10,8 @@ public class CoursePOJO{
     }
 
     public void setCourseName( String courseName ){
-        if(courseName.length() > 10){
+        if(courseName.length() > 1){
             this.courseName = "courseTest";
-        }else{
-            this.courseName = courseName;
         }
     }
 
