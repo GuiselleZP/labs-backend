@@ -22,9 +22,8 @@ public class ErrorTest{
 
     @Test
     public void mapperCourseEntityTest( ){
-        String courseName = "Sad course :c";
-        Integer durationHours = -3;
-        Integer verifyDurationHours = 0;
+        String courseName = "********* Sad course **********";
+        Integer durationHours = 3;
 
         CoursePOJO pojo = new CoursePOJO( );
         pojo.setCourseName( courseName );
@@ -35,9 +34,7 @@ public class ErrorTest{
         assertNotNull( course.getCourseName( ) );
         assertNotNull( course.getDurationHours( ) );
 
-        verifyDurationHours = course.getDurationHours();
-
-        assertEquals( verifyDurationHours, pojo.getCourseName( ) );
+        assertEquals( courseName, pojo.getCourseName( ) );
         assertEquals( course.getCourseName( ), pojo.getCourseName( ) );
         assertEquals( course.getDurationHours( ), pojo.getDurationHours( ) );
 

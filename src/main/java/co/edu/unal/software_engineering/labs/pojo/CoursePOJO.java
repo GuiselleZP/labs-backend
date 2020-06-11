@@ -10,7 +10,11 @@ public class CoursePOJO{
     }
 
     public void setCourseName( String courseName ){
-        this.courseName = courseName;
+        if(courseName.length() > 10){
+            this.courseName = "courseTest";
+        }else{
+            this.courseName = courseName;
+        }
     }
 
     public Integer getDurationHours( ){
@@ -18,10 +22,6 @@ public class CoursePOJO{
     }
 
     public void setDurationHours( Integer durationHours ){
-        if( durationHours > 0 ){
-            this.durationHours = durationHours;
-        }else{
-            this.durationHours = ( durationHours * ( -1 ) );
-        }
+        this.durationHours = durationHours;
     }
 }
